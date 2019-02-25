@@ -3,13 +3,24 @@
 # Please see the file LICENSE in the source
 # distribution of this software for license terms.
 
+ARCH = $(shell uname)
+# ARCH == Linux is taken as the default
+PY_INCLUDE = /usr/include/python2.7
+ARFLAGS = crU
+ARCH_FLAGS = 
+
+ifeq ($(ARCH), Darwin)
+    ARCH_FLAGS = -arch x86_64 -flat_namespace -undefined suppress
+    PY_INCLUDE = /System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 
+	ARFLAGS = cru
+endif
+
 SHELL = /bin/sh
 CC = gcc
 CFLAGS = -w -Wall -O3 -fPIC -std=c++11 -I ../include -frounding-math -fsignaling-nans -fsigned-zeros -fno-finite-math-only -msse2 -mfpmath=sse
 LFLAGS = -shared
 AR = ar
-COMPILE = $(CC) $(CFLAGS)
-PY_INCLUDE = /usr/include/python2.7
+COMPILE = $(CC) $(CFLAGS) $(ARCH_FLAGS)
 CL = occ
 RANLIB = ranlib
 LDFLAGS = -lm -lstdc++ -lgmp
@@ -57,7 +68,7 @@ clean:
 # liboccam3.a depends on all the .o files
 $(LIB): $(LIBOBJECTS)
 	-rm -f $(LIB)			     # remove old lib
-	$(AR) crU $(LIB) $(LIBOBJECTS)	     # create a new lib with all the objects
+	$(AR) $(ARFLAGS) $(LIB) $(LIBOBJECTS)	     # create a new lib with all the objects
 	$(RANLIB) $(LIB)		     # update the table of contents for the lib
 
 # occam.so depends on liboccam3.a and pyoccam.cpp
