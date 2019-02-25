@@ -10,7 +10,7 @@
 #include "_Core.h"
 #include "Report.h"
 #include "ManagerBase.h"
-#include "Math.h"
+#include "OccamMath.h"
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>

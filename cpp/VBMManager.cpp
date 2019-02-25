@@ -7,7 +7,7 @@
 
 #include <new>
 #include "AttributeList.h"
-#include "Math.h"
+#include "OccamMath.h"
 #include "ModelCache.h"
 #include "RelCache.h"
 #include "Report.h"

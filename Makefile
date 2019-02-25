@@ -8,7 +8,6 @@ SHELL = /bin/sh
 INSTALL_ROOT = install
 WEB_ROOT = $(INSTALL_ROOT)/web
 CL_ROOT = $(INSTALL_ROOT)/cl
-PY_INCLUDE = /usr/include/python2.7
 
 HEADERS = \
 	include/attrDescs.h			\
@@ -19,7 +18,7 @@ HEADERS = \
 	include/Input.h				\
 	include/Key.h				\
 	include/ManagerBase.h		\
-	include/Math.h				\
+	include/OccamMath.h				\
 	include/ModelCache.h		\
 	include/Model.h				\
 	include/Options.h			\
@@ -44,7 +43,7 @@ CPP_FILES = \
 	cpp/Key.cpp \
 	cpp/Makefile \
 	cpp/ManagerBase.cpp \
-	cpp/Math.cpp \
+	cpp/OccamMath.cpp \
 	cpp/ModelCache.cpp \
 	cpp/Model.cpp \
 	cpp/occ.cpp \

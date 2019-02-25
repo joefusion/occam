@@ -7,7 +7,7 @@
 
 #include <math.h>
 
-#include "Math.h"
+#include "OccamMath.h"
 #include "Model.h"
 #include "Relation.h"
 #include "_Core.h"

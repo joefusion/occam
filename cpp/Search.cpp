@@ -13,7 +13,7 @@
 #include "Search.h"
 #include "ModelCache.h"
 #include "_Core.h"
-#include "Math.h"
+#include "OccamMath.h"
 #include <assert.h>
 #include <iostream>
 using namespace std;

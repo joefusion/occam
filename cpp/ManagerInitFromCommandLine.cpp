@@ -9,7 +9,7 @@
 #include "Input.h"
 #include "Key.h"
 #include "ManagerBase.h"
-#include "Math.h"
+#include "OccamMath.h"
 #include "Model.h"
 #include "ModelCache.h"
 #include "Options.h"

@@ -10,7 +10,7 @@
 #include "ManagerBase.h"
 #include <cstring>
 #include <cmath>
-#include "Math.h"
+#include "OccamMath.h"
 #include <climits>
 
 void Report::printConditional_DV(FILE *fd, Model *model, bool calcExpectedDV, char* classTarget) {

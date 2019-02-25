@@ -10,7 +10,7 @@
 #include "Report.h"
 #include <cstring>
 #include "Model.h"
-#include "Math.h"
+#include "OccamMath.h"
 #include <math.h>
 void Report::printResiduals(FILE *fd, Model *model, bool skipTrained, bool skipIVIs) {
 

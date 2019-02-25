@@ -8,7 +8,7 @@
 #include <math.h>
 #include "ManagerBase.h"
 #include "AttributeList.h"
-#include "Math.h"
+#include "OccamMath.h"
 #include "Model.h"
 #include "ModelCache.h"
 #include "Relation.h"
