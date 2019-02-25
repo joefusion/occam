@@ -2,7 +2,11 @@
 *.o
 *.so
 *.pyc
+*.swp
+*~
 occ
 install
 .cproject
 .project
+.pydevproject
+.settings/*
